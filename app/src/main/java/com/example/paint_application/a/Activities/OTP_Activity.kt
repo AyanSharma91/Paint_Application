@@ -122,7 +122,7 @@ class OTP_Activity:AppCompatActivity() {
                 FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener(object :
                     OnSuccessListener<DocumentSnapshot> {
                     override fun onSuccess(data: DocumentSnapshot?) {
-                        var   arr = data!!.get("imageList") as ArrayList<String?>
+                        var   arr = data!!.get("imageList") as ArrayList<String>?
                         var user = User(
                             mAuth.uid.toString(), intent.getStringExtra("name"), intent.getStringExtra(
                                 "mobile"),arr

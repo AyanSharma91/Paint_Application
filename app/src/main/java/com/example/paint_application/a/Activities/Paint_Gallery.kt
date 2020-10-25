@@ -58,9 +58,9 @@ class Paint_Gallery : AppCompatActivity() {
 
         FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener(object : OnSuccessListener<DocumentSnapshot>{
             override fun onSuccess(data: DocumentSnapshot?) {
-                var arr : ArrayList<String?> = data!!.get("imageList") as ArrayList<String?>
+                var arr : ArrayList<String>? = data!!.get("imageList") as ArrayList<String>?
 
-                if(arr.isEmpty())
+                if(arr==null)
                 {
                     empty_status= findViewById(R.id.empty_status)
                     empty_status.visibility= View.VISIBLE

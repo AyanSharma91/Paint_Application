@@ -13,7 +13,7 @@ import com.example.paint_application.R
 import com.squareup.picasso.Picasso
 import java.io.File
 
-class Paint_Gallery_Adapter(val context: Context, val arr: ArrayList<String?>) : RecyclerView.Adapter<Paint_Gallery_Adapter.DashboardViewHolder>() {
+class Paint_Gallery_Adapter(val context: Context, val arr: ArrayList<String>?) : RecyclerView.Adapter<Paint_Gallery_Adapter.DashboardViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
 
         val view = LayoutInflater.from(parent.context)
@@ -22,12 +22,12 @@ class Paint_Gallery_Adapter(val context: Context, val arr: ArrayList<String?>) :
     }
 
     override fun getItemCount(): Int {
-        return arr.size
+        return arr!!.size
     }
 
 
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
-        val book = arr[position]
+        val book = arr!![position]
 
         Picasso.get().load(book).error(R.drawable.paint_app_icon).into(holder.image)
 

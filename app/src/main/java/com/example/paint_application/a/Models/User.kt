@@ -4,6 +4,6 @@ class User(
     var id:String,
     var name: String,
     var number: String,
-    var imageList: ArrayList<String?>? = null
+    var imageList: ArrayList<String>? = null
 ) {
 }
