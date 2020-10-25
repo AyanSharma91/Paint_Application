@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".a.Activities.Paint_Gallery">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar2"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+            <include layout="@layout/layout_new_toolbar">
+            </include>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_paint_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="62dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/empty_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Images To Show"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerInParent="true">
+
+    </TextView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="52dp"
+        android:id="@+id/progress_layout"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="50dp"
+            android:layout_centerInParent="true"
+            android:layout_height="50dp"
+            >
+
+        </ProgressBar>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
